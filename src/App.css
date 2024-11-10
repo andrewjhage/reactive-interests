@@ -1,10 +1,78 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header,
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonials,
+.accordion,
+.carousel {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+
+  .testimonials,
+  .accordion,
+  .carousel {
+    margin-bottom: 0;
+  }
+
+  .accordion {
+    flex: 1;
+  }
+
+  .carousel,
+  .testimonials {
+    flex: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .header,
+  .footer {
+    text-align: left;
+    padding: 20px;
+  }
+
+  .carousel {
+    max-width: 60%;
+  }
+
+  .testimonials {
+    max-width: 40%;
+  }
+}
+
 .App {
   text-align: center;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {

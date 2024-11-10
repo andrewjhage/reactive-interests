@@ -8,24 +8,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className='flex flex-col min-h-screen'>
-      <Header 
+    <div className='container'>
+      <Header className='header'
         backgroundPic={"personalTrainer.jpg"}
-        fontFamily={"'Great Vibes', cursive"}
+        fontFamily={"'Times New Roman', Times, serif"}
       />
       <main className='flex-grow p-4 max-w-6xl mx-auto'>
         <div className='flex flex-col md:flex-row gap-8'>
-          <Testamonials content={<h3>Andrew Hage Personal Training</h3>}>
-            <img
-              src='/images/personalTrainer.jpg'
-              alt='Personal Trainer'
-              className='w-120 h-auto shadow-2xl roundedp-lg mt-8'
-            />
-          </Testamonials>
           <section className='md:w-1/3'>
             <h2 className='text-2xl font-semibold mb-4'>FAQ</h2>
             {accordionData.map((item, index) => (
-              <Accordion 
+              <Accordion className='accordion'
               key={index}
               title={item.title}
               content={item.content}
@@ -34,12 +27,31 @@ function App() {
           </section>
           <section className='md:w-2/3'>
             <h2 className='text-2xl font-semibold mb-4'>Albums</h2>
-            <Carousel items={carouselData} />
+            <Carousel className="carousel" items={carouselData} />
           </section>
         </div>
+
+        <div>
+            <Testamonials className='testimonials'
+                title="What people are saying"
+                testimonialText="Working with Andrew has been a game-changer for my fitness journey! ..."
+                authorName="Andrew Hage"
+                authorTitle="Founder of Andrew's Training Inc."
+                authorImage="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+            />
+            
+            <Testamonials className='testimonials'
+                title="Client Review"
+                testimonialText="This experience transformed the way I approach fitness, and I feel healthier and stronger every day!"
+                authorName="Jennifer Clinton"
+                authorTitle="Fitness Enthusiast"
+                authorImage="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+            />
+        </div>
+
         <link href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap' rel='stylesheet' />
       </main>
-      <Footer
+      <Footer className='footer'
         footerText="© 2024 Andrew Hage Personal Training. All rights reserved"
         link1Text="Twitter"
         link1Url="https://twitter.com/andrewhage"
