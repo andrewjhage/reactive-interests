@@ -26,7 +26,7 @@ function App() {
             ))}
           </section>
           <section className='md:w-2/3'>
-            <h2 className='text-2xl font-semibold mb-4'>Albums</h2>
+            <h2 className='text-2xl font-semibold mb-4'>Training</h2>
             <Carousel className="carousel" items={carouselData} />
           </section>
         </div>
@@ -84,37 +84,30 @@ const carouselData = [
   {
     image: "./images/treadmills.jpeg",
     title: "Treadmills",
-    description: "2006",
   },
   {
     image: "./images/bicepCurl.jpeg",
     title: "Bicep Curls",
-    description: "2008",
   },
   {
     image: "./images/femaleLifting.jpg",
     title: "Female Lifting",
-    description: "2010",
   },
   {
     image: "./images/freeWeights.jpeg",
     title: "Free Weights",
-    description: "2012",
   },
   {
     image: "./images/homeGym.jpg",
     title: "Home Gym",
-    description: "2014",
   },
   {
     image: "./images/kettleBall.jpeg",
     title: "Kettle Bell",
-    description: "2010",
   },
   {
     image: "./images/weights.jpeg",
     title: "Weights",
-    description: "2010",
   },
 ];
 
